@@ -19,25 +19,13 @@ namespace OpenCVTest
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            Mat src = new Mat(@"Images\IMG_20151020_155508729.jpg", ImreadModes.GrayScale);
-            Mat dst = new Mat();
 
-            Cv2.Canny(src, dst, 50, 200);
-
-            using (new Window("src image", src)) // grey scale representation original method
-            {
-                Cv2.WaitKey();
-            }
-
-            using (new Window("dst image", dst)) // matrix representation of Canny method
-            {
-                Cv2.WaitKey();
-            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        // color comparison of translated image
+        private void button1_Click(object sender, EventArgs e)
         {
             var src1 = new Mat(@"C:\workspace\github\image-compare\OpenCVTest\Images\IMG_20151020_155510557.jpg");
             var src2 = new Mat(@"C:\workspace\github\image-compare\OpenCVTest\Images\IMG_20151020_155508729.jpg");
@@ -51,5 +39,49 @@ namespace OpenCVTest
             }
         }
 
+        // grey scale comparison of translated image
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var src1 = new Mat(@"C:\workspace\github\image-compare\OpenCVTest\Images\IMG_20151020_155510557.jpg", ImreadModes.GrayScale);
+            var src2 = new Mat(@"C:\workspace\github\image-compare\OpenCVTest\Images\IMG_20151020_155508729.jpg", ImreadModes.GrayScale);
+            var output = new Mat();
+
+            Cv2.Absdiff(src1, src2, output);
+
+            using (new Window("output of abs diff", WindowMode.KeepRatio, output))
+            {
+                Cv2.WaitKey();
+            }
+        }
+
+        // color comparison of translated image
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var src1 = new Mat(@"C:\workspace\github\image-compare\OpenCVTest\Images\IMG_20151020_155510557.jpg");
+            var src2 = new Mat(@"C:\workspace\github\image-compare\OpenCVTest\Images\IMG_20151020_155516713.jpg");
+            var output = new Mat();
+
+            Cv2.Absdiff(src1, src2, output);
+
+            using (new Window("output of abs diff", WindowMode.KeepRatio, output))
+            {
+                Cv2.WaitKey();
+            }
+        }
+
+        // color comparison of translated image
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var src1 = new Mat(@"C:\workspace\github\image-compare\OpenCVTest\Images\IMG_20151020_155510557.jpg", ImreadModes.GrayScale);
+            var src2 = new Mat(@"C:\workspace\github\image-compare\OpenCVTest\Images\IMG_20151020_155516713.jpg", ImreadModes.GrayScale);
+            var output = new Mat();
+
+            Cv2.Absdiff(src1, src2, output);
+
+            using (new Window("output of abs diff", WindowMode.KeepRatio, output))
+            {
+                Cv2.WaitKey();
+            }
+        }
     }
 }
