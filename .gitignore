@@ -1,3 +1,4 @@
 OpenCVTest/bin/
 OpenCVTest/obj/
 packages/
+.nuget/
