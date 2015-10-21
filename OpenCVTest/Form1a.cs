@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using OpenCvSharp;
+using OpenCvSharp.XFeatures2D;
 
 namespace OpenCVTest
 {
@@ -15,12 +16,12 @@ namespace OpenCVTest
         /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
-            var filename = string.Empty;
+            string filename;
 
-            filename = @"Images\IMG_20151020_155508729.jpg";
+            filename = Constants.ImageControl1;
             DrawFeatures(filename, FindFeatures(filename));
 
-            filename = @"Images\IMG_20151020_155510557.jpg";
+            filename = Constants.ImageControl2;
             DrawFeatures(filename, FindFeatures(filename));
         }
 
@@ -37,6 +38,13 @@ namespace OpenCVTest
                 // ORB
                 var orb = ORB.Create(1000);
                 KeyPoint[] keypoints = orb.Detect(gray);
+
+                // FREAK
+                FREAK freak = FREAK.Create();
+
+                Mat freakDescriptors = new Mat();
+                freak.Compute(gray, ref keypoints, freakDescriptors);
+
                 return keypoints;
             }
         }
@@ -77,6 +85,11 @@ namespace OpenCVTest
                     Cv2.WaitKey();
                 }
             }
+        }
+
+        private void FindMatchingFeatures_Click(object sender, EventArgs e)
+        {
+            var file1 = Constants.ImageControl1;
         }
     }
 }
