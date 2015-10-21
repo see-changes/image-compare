@@ -107,10 +107,18 @@
     <Content Include="Images\IMG_20151020_155508729.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\IMG_20151020_155510557.jpg" />
-    <Content Include="Images\IMG_20151020_155516713.jpg" />
-    <Content Include="Images\IMG_20151020_155520579.jpg" />
-    <Content Include="Images\IMG_20151020_155534249.jpg" />
+    <Content Include="Images\IMG_20151020_155510557.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\IMG_20151020_155516713.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\IMG_20151020_155520579.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\IMG_20151020_155534249.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
