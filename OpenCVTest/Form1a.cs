@@ -27,24 +27,33 @@ namespace OpenCVTest
 
         private IEnumerable<KeyPoint> FindFeatures(string filename)
         {
-            return FindFeatures_FREAK(filename);
+            return FindFeatures_ORB(filename);
             //return FindFeatures_HarrisCornerDetector(filename);
         }
 
-        private IEnumerable<KeyPoint> FindFeatures_FREAK(string filename)
+        private IEnumerable<KeyPoint> FindFeaturesDescriptors_ORB(string filename, out Mat descriptors)
+        {
+            using (var gray = new Mat(filename, ImreadModes.GrayScale))
+            {
+                // ORB
+                var orb = ORB.Create(250);
+                KeyPoint[] keypoints = orb.Detect(gray);
+
+                descriptors = new Mat();
+                orb.Compute(gray, ref keypoints, descriptors);
+
+                return keypoints;
+            }
+        }
+
+        private IEnumerable<KeyPoint> FindFeatures_ORB(string filename)
         {
             using (var gray = new Mat(filename, ImreadModes.GrayScale))
             {
                 // ORB
                 var orb = ORB.Create(1000);
                 KeyPoint[] keypoints = orb.Detect(gray);
-
-                // FREAK
-                FREAK freak = FREAK.Create();
-
-                Mat freakDescriptors = new Mat();
-                freak.Compute(gray, ref keypoints, freakDescriptors);
-
+                
                 return keypoints;
             }
         }
@@ -90,6 +99,34 @@ namespace OpenCVTest
         private void FindMatchingFeatures_Click(object sender, EventArgs e)
         {
             var file1 = Constants.ImageControl1;
+            var file2 = Constants.ImageTongsMoved;
+
+            using (var img1 = new Mat(file1, ImreadModes.GrayScale))
+            using (var img2 = new Mat(file2, ImreadModes.GrayScale))
+            using (var dst = new Mat())
+            {
+                // find keypoints
+                //var kp1 = FindFeatures(Constants.ImageControl1);
+                //var kp2 = FindFeatures(Constants.ImageControl2);
+
+                // find descriptors
+                var descriptors1 = new Mat();
+                var descriptors2 = new Mat();
+
+                var kp1 = FindFeaturesDescriptors_ORB(file1, out descriptors1);
+                var kp2 = FindFeaturesDescriptors_ORB(file2, out descriptors2);
+
+                // find keypoint matches
+                var bfMatcher = new BFMatcher(NormTypes.L2, false);
+                DMatch[] bfMatches = bfMatcher.Match(descriptors1, descriptors2);
+
+                // draw things
+                Cv2.DrawMatches(img1, kp1, img2, kp2, bfMatches, dst);
+                using (new Window("ORB matching (by BFMatcher)", WindowMode.FreeRatio, dst))
+                {
+                    Cv2.WaitKey();
+                }
+            }
         }
     }
 }
