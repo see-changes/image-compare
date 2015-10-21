@@ -93,5 +93,6 @@ namespace OpenCVTest
             var srcC = new Mat(@"Images\IMG_20151020_155510557.jpg", ImreadModes.GrayScale);
             var srcD = new Mat(@"Images\IMG_20151020_155508729.jpg", ImreadModes.GrayScale);
         }
+
     }
 }
