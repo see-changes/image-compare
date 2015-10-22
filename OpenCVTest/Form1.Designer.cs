@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -35,6 +36,16 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.form1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.constantsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.constantsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.form1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.constantsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.constantsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -107,11 +118,63 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.HomographyTransform_Click);
             // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(25, 192);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 7;
+            this.button8.Text = "button8";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(25, 236);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.TabIndex = 8;
+            this.button9.Text = "button9";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(304, 15);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(300, 21);
+            this.comboBox1.TabIndex = 9;
+            // 
+            // form1BindingSource
+            // 
+            this.form1BindingSource.DataSource = typeof(OpenCVTest.Form1);
+            // 
+            // constantsBindingSource
+            // 
+            this.constantsBindingSource.DataSource = typeof(OpenCVTest.Constants);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(304, 60);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(300, 21);
+            this.comboBox2.TabIndex = 10;
+            // 
+            // constantsBindingSource1
+            // 
+            this.constantsBindingSource1.DataSource = typeof(OpenCVTest.Constants);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(891, 344);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -122,6 +185,9 @@
             this.Name = "Form1";
             this.Text = "Image Comparison";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.form1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.constantsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.constantsBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -135,6 +201,13 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.BindingSource constantsBindingSource;
+        private System.Windows.Forms.BindingSource form1BindingSource;
+        private System.Windows.Forms.BindingSource constantsBindingSource1;
     }
 }
 
