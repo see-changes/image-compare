@@ -14,5 +14,10 @@
         public const string ImageD2_5 = @"Images\IMG_20151021_155545368.jpg";
         public const string ImageD2_6 = @"Images\IMG_20151021_155559044.jpg";
         public const string ImageD2_7 = @"Images\IMG_20151021_155605719.jpg";
+        public const string Trailer_Open_1 = @"Images\trailer_open_1.jpg";
+        public const string Trailer_Close_1 = @"Images\trailer_close_1.jpg";
+        public const string Trailer_Open_2 = @"Images\trailer_open_2.jpg";
+        public const string Trailer_Close_2 = @"Images\trailer_close_2.jpg";
+
     }
 }

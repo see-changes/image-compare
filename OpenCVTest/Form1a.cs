@@ -33,9 +33,15 @@ namespace OpenCVTest
             using (var gray = new Mat(filename, ImreadModes.GrayScale))
             {
                 // ORB
-                var orb = ORB.Create(250);
+                var orb = ORB.Create(
+                    scoreType: ORBScore.Harris,
+                    nFeatures:500, 
+                    edgeThreshold: 500, 
+                    patchSize: 500, 
+                    scaleFactor: 1.5f, 
+                    nLevels: 12, 
+                    wtaK: 3);
                 KeyPoint[] keypoints = orb.Detect(gray);
-
                 descriptors = new Mat();
                 orb.Compute(gray, ref keypoints, descriptors);
 
@@ -114,7 +120,7 @@ namespace OpenCVTest
                 var kp2 = FindFeaturesDescriptors_ORB(file2, out descriptors2);
 
                 // find keypoint matches
-                var bfMatcher = new BFMatcher(NormTypes.L2, false);
+                var bfMatcher = new BFMatcher(NormTypes.Hamming2, true);
                 DMatch[] bfMatches = bfMatcher.Match(descriptors1, descriptors2);
 
                 // draw things

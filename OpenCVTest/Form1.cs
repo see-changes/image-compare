@@ -73,7 +73,11 @@ namespace OpenCVTest
             Constants.ImageD2_4,
             Constants.ImageD2_5,
             Constants.ImageD2_6,
-            Constants.ImageD2_7
+            Constants.ImageD2_7,
+            Constants.Trailer_Close_1,
+            Constants.Trailer_Open_1,
+            Constants.Trailer_Close_2,
+            Constants.Trailer_Open_2,
         };
     }
 }   
