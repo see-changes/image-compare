@@ -34,12 +34,12 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.form1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.constantsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.constantsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.form1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.constantsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.constantsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.form1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.constantsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.constantsBindingSource1)).BeginInit();
@@ -51,7 +51,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(242, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Image Translation - Color Diff";
+            this.button1.Text = "Absolute Difference - Full Color";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -61,7 +61,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(242, 26);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Image Translation - Grey Diff";
+            this.button2.Text = "Absolute Difference - Greyscale";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -71,7 +71,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(242, 23);
             this.button3.TabIndex = 2;
-            this.button3.Text = "CalcTranslateDifferences";
+            this.button3.Text = "Find Features (Keypoints)";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -81,7 +81,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(242, 24);
             this.button6.TabIndex = 5;
-            this.button6.Text = "Find Matching Featuers";
+            this.button6.Text = "Find Matching Features";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.FindMatchingFeatures_Click);
             // 
@@ -93,14 +93,6 @@
             this.comboBox1.Size = new System.Drawing.Size(300, 21);
             this.comboBox1.TabIndex = 9;
             // 
-            // form1BindingSource
-            // 
-            this.form1BindingSource.DataSource = typeof(OpenCVTest.Form1);
-            // 
-            // constantsBindingSource
-            // 
-            this.constantsBindingSource.DataSource = typeof(OpenCVTest.Constants);
-            // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
@@ -108,10 +100,6 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(300, 21);
             this.comboBox2.TabIndex = 10;
-            // 
-            // constantsBindingSource1
-            // 
-            this.constantsBindingSource1.DataSource = typeof(OpenCVTest.Constants);
             // 
             // button4
             // 
@@ -132,6 +120,18 @@
             this.button5.Text = "Show Image";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // form1BindingSource
+            // 
+            this.form1BindingSource.DataSource = typeof(OpenCVTest.Form1);
+            // 
+            // constantsBindingSource
+            // 
+            this.constantsBindingSource.DataSource = typeof(OpenCVTest.Constants);
+            // 
+            // constantsBindingSource1
+            // 
+            this.constantsBindingSource1.DataSource = typeof(OpenCVTest.Constants);
             // 
             // Form1
             // 
