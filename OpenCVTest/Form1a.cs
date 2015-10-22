@@ -31,7 +31,7 @@ namespace OpenCVTest
             //return FindFeatures_HarrisCornerDetector(filename);
         }
 
-        private IEnumerable<KeyPoint> FindFeaturesDescriptors_ORB(string filename, out Mat descriptors)
+        private KeyPoint[] FindFeaturesDescriptors_ORB(string filename, out Mat descriptors)
         {
             using (var gray = new Mat(filename, ImreadModes.GrayScale))
             {
@@ -129,7 +129,7 @@ namespace OpenCVTest
             }
         }
 
-        private void HomographyTransform_Click(object sender, EventArgs e)
+        private void GoodMatchesOnly_Click(object sender, EventArgs e)
         {
 
         }

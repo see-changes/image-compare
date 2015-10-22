@@ -114,9 +114,9 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(149, 23);
             this.button7.TabIndex = 6;
-            this.button7.Text = "HomographyTransform";
+            this.button7.Text = "Good Matches Only";
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.HomographyTransform_Click);
+            this.button7.Click += new System.EventHandler(this.GoodMatchesOnly_Click);
             // 
             // button8
             // 
