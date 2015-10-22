@@ -18,10 +18,7 @@ namespace OpenCVTest
         {
             string filename;
 
-            filename = Constants.ImageControl1;
-            DrawFeatures(filename, FindFeatures(filename));
-
-            filename = Constants.ImageControl2;
+            filename = comboBox1.SelectedItem.ToString();
             DrawFeatures(filename, FindFeatures(filename));
         }
 
@@ -98,8 +95,8 @@ namespace OpenCVTest
 
         private void FindMatchingFeatures_Click(object sender, EventArgs e)
         {
-            var file1 = Constants.ImageControl1;
-            var file2 = Constants.ImageTongsMoved;
+            var file1 = comboBox1.SelectedItem.ToString();
+            var file2 = comboBox2.SelectedItem.ToString();
 
             using (var img1 = new Mat(file1, ImreadModes.GrayScale))
             using (var img2 = new Mat(file2, ImreadModes.GrayScale))
