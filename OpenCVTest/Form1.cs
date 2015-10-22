@@ -55,6 +55,29 @@ namespace OpenCVTest
             }
         }
 
+        // grey scale comparison of translated image
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var src = new Mat(comboBox1.SelectedItem.ToString());
+
+            using (new Window("image", WindowMode.KeepRatio, src))
+            {
+                Cv2.WaitKey();
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var src = new Mat(comboBox2.SelectedItem.ToString());
+
+            using (new Window("image", WindowMode.KeepRatio, src))
+            {
+                Cv2.WaitKey();
+            }
+        }
+
+
+
         public List<String> ImageNames
         {
             get { return _imageNames; }

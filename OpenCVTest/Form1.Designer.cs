@@ -38,6 +38,8 @@
             this.constantsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.constantsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.form1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.constantsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.constantsBindingSource1)).BeginInit();
@@ -86,7 +88,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(394, 60);
+            this.comboBox1.Location = new System.Drawing.Point(394, 15);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(300, 21);
             this.comboBox1.TabIndex = 9;
@@ -102,7 +104,7 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(394, 106);
+            this.comboBox2.Location = new System.Drawing.Point(394, 122);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(300, 21);
             this.comboBox2.TabIndex = 10;
@@ -111,11 +113,33 @@
             // 
             this.constantsBindingSource1.DataSource = typeof(OpenCVTest.Constants);
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(619, 42);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 11;
+            this.button4.Text = "Show Image";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(619, 151);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 12;
+            this.button5.Text = "Show Image";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(746, 186);
+            this.ClientSize = new System.Drawing.Size(710, 189);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button6);
@@ -125,6 +149,7 @@
             this.Name = "Form1";
             this.Text = "Image Comparison";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Click += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.form1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.constantsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.constantsBindingSource1)).EndInit();
@@ -143,6 +168,8 @@
         private System.Windows.Forms.BindingSource constantsBindingSource;
         private System.Windows.Forms.BindingSource form1BindingSource;
         private System.Windows.Forms.BindingSource constantsBindingSource1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
 
