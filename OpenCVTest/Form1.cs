@@ -80,11 +80,6 @@ namespace OpenCVTest
         }
         private static List<String> _imageNames = new List<string>
         {
-            Constants.ImageControl1,
-            Constants.ImageControl2,
-            Constants.ImageTongsMoved,
-            Constants.ImageTongsGone,
-            Constants.ImageSpoonsMoved,
             Constants.ImageD2_1,
             Constants.ImageD2_2,
             Constants.ImageD2_3,
@@ -96,6 +91,11 @@ namespace OpenCVTest
             Constants.Trailer_Open_1,
             Constants.Trailer_Close_2,
             Constants.Trailer_Open_2,
+            Constants.ImageControl1,
+            Constants.ImageControl2,
+            Constants.ImageTongsMoved,
+            Constants.ImageTongsGone,
+            Constants.ImageSpoonsMoved,
         };
     }
 }   
