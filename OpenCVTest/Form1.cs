@@ -1,12 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.Remoting.Messaging;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using OpenCvSharp;
 
@@ -18,7 +11,9 @@ namespace OpenCVTest
         {
             InitializeComponent();
             comboBox1.Items.AddRange(ImageNames.ToArray());
+            comboBox1.SelectedIndex = 0;
             comboBox2.Items.AddRange(ImageNames.ToArray());
+            comboBox2.SelectedIndex = 1;
         }
 
         private void Form1_Load(object sender, EventArgs e)
